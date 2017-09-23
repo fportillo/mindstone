@@ -10,6 +10,8 @@ import spark.kotlin.ignite
 fun main(args: Array<String>) {
     val http: Http = ignite()
 
+    SchemaCreator().migrate()
+
     http.get("/hello") {
         "Hello Spark Kotlin!"
     }
