@@ -3,3 +3,6 @@ db.sqlite3
 
 # cached files
 **/__pycache__
+
+# pycharm files
+.idea/
