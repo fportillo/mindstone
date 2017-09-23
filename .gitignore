@@ -1,8 +1,6 @@
-# sqlite dbfile
-db.sqlite3
-
-# cached files
-**/__pycache__
-
-# pycharm files
+# ide files
 .idea/
+
+**.class
+
+**/target
