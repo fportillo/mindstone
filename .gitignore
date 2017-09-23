@@ -1,2 +1,5 @@
 # sqlite dbfile
 db.sqlite3
+
+# cached files
+**/__pycache__
