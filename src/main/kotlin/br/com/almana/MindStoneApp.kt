@@ -4,16 +4,23 @@ package br.com.almana
  * @author Francisco Portillo (francisco.portillo@ifood.com.br)
  * Created on 9/23/17.
  */
-import spark.kotlin.Http
-import spark.kotlin.ignite
+import br.com.almana.entity.Release
+import org.jetbrains.exposed.sql.selectAll
+import org.jetbrains.exposed.sql.transactions.transaction
+import spark.kotlin.get
+import spark.kotlin.staticFiles
 
 fun main(args: Array<String>) {
-    val http: Http = ignite()
 
-    SchemaCreator().migrate()
+    MindStoneDb.connect()
+    MindStoneDb.migrate()
+    staticFiles.location("/public")
 
-    http.get("/hello") {
-        "Hello Spark Kotlin!"
+    get("/hello") {
+        transaction {
+            val selectAll = Release.selectAll()
+            selectAll
+        }
     }
 }
 
