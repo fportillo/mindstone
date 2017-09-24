@@ -13,7 +13,6 @@ import spark.kotlin.staticFiles
 fun main(args: Array<String>) {
 
     MindStoneDb.connect()
-    MindStoneDb.migrate()
     staticFiles.location("/public")
 
     get("/hello") {

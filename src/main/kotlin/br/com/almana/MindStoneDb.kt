@@ -15,8 +15,4 @@ object MindStoneDb {
                 driver = Configs.jdbcDriver()
         )
     }
-
-    fun migrate() {
-        MindStoneSchema.migrate()
-    }
 }
