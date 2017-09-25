@@ -19,10 +19,32 @@
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <slf4j.simple.version>1.6.1</slf4j.simple.version>
         <pgjdbc.version>42.1.4</pgjdbc.version>
+        <jackson.version>2.9.1</jackson.version>
         <main.class>br.com.almana.MindStoneAppKt</main.class>
+
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-kotlin -->
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-kotlin</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
         <dependency>
             <groupId>joda-time</groupId>
